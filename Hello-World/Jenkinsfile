@@ -12,8 +12,6 @@ pipeline {
             steps {
                 // Instalar dependencias
                 sh 'pip install -r Hello-World/requirements.txt'
-                // Instalar pytest
-                sh 'pip install pytest'
                 // Ejecutar pruebas con pytest
                 sh 'pytest Hello-World/tests/'
             }
