@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Clonar el repositorio (no es necesario en este caso ya que estamos en el mismo directorio)
-                // git 'https://github.com/your-username/Hello-World.git'
+                // Clonar el repositorio
+                git 'https://github.com/Carlos2002234/CI-CD.git'
             }
         }
         stage('Test') {
