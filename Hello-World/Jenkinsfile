@@ -11,10 +11,11 @@ pipeline {
         stage('Test') {
             steps {
                 // Instalar dependencias
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r Hello-World/requirements.txt'
                 // Ejecutar pruebas con pytest
-                sh 'pytest tests/'
+                sh 'pytest Hello-World/tests/'
             }
         }
     }
 }
+
