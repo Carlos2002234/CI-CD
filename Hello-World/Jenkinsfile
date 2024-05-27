@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clonar el repositorio (no es necesario en este caso ya que estamos en el mismo directorio)
+                // git 'https://github.com/your-username/Hello-World.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Instalar dependencias
+                sh 'pip install -r requirements.txt'
+                // Ejecutar pruebas con pytest
+                sh 'pytest tests/'
+            }
+        }
+    }
+}
